@@ -3,10 +3,10 @@ This repository contains the case study of predicting covid-19 cases in malaysia
 
 ## Task Implementation
 
-1. Exploratory Data Analysis
+## 1. Exploratory Data Analysis
 - Analyze the cases_new column and plot a line plot for time series problem.
 
-1. Data Cleaning
+## 2. Data Cleaning
 - Change non-numeric values such as '' to null values with to_numeric.
 - df['cases_new'] = pd.to_numeric(df['cases_new'], errors='coerce')
 - Interpolating missing data
@@ -14,12 +14,12 @@ This repository contains the case study of predicting covid-19 cases in malaysia
 - Select cases_new column as data for feature and target variable.
 - data = df['cases_new'].values
 
-1. Data Preprocessing
+## 3. Data Preprocessing
 2 steps were taken for data preprocessing
 - Use Min-Max Scaler for data scaling.
 - Set window size to 30 for past 30 days of data as feature variable and target variable
 
-1. Model Development
+## 4. Model Development
 - A model architecture is used for guidance.
 - Set LSTM neurons to 64 as limit to prevent from brute forcingthe problem.
 - Test data is 20# and rest is allocated to training data.
@@ -28,11 +28,11 @@ This repository contains the case study of predicting covid-19 cases in malaysia
 - Mean Absolute Error Function is the loss function
 - No early stopping implemented.
 
-1. Results
+## 5. Results
 - The results for both training loss and training mse were taken.
 - Compare it with the validation loss and validation mse.
 
-1. Model Performance
+## 6. Model Performance
 - The objective for this case study is to achieve Mean Absolute Percentage Error of below 10%.
 - The model developed achieve MAPE (Mean Absolute Percentage Error) of 5.17%.
 - The model is success.
